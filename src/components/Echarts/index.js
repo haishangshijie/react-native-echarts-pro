@@ -71,7 +71,9 @@ function Echarts(props, ref) {
   function onMessage(event) {
     const echartsData = JSON.parse(event.nativeEvent.data);
     // 判断监听类型
-    if (echartsData.type === "datazoom") {
+    if (echartsData.type === "highlight") {
+      props.onHighlight?.(JSON.parse(event.nativeEvent.data));
+    } else if (echartsData.type === "datazoom") {
       props.onDataZoom?.();
     } else if (echartsData.type === "legendselectchanged") {
       props.legendSelectChanged?.(echartsData.name);

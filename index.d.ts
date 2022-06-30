@@ -9,6 +9,7 @@ declare function RNEChartsPro(props: {
   legendSelectChanged?(result: string);
   onDataZoom?(result: string);
   onPress?(result: string);
+  onHighlight?(result: string);
 }): JSX.Element;
 
 export default RNEChartsPro;

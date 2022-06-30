@@ -30,6 +30,9 @@ export default function renderChart(props) {
       };
       window.ReactNativeWebView.postMessage(JSON.stringify(clickParams));
     });
+    myChart.on('highlight', (params)=>{
+      window.ReactNativeWebView.postMessage(JSON.stringify(params));
+    });
     myChart.on('dataZoom', (params)=>{
         window.ReactNativeWebView.postMessage(JSON.stringify({type:params.type}));
     });
