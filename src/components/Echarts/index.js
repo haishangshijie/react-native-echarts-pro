@@ -117,7 +117,7 @@ function Echarts(props, ref) {
       <WebView
         androidHardwareAccelerationDisabled={true}
         textZoom={100}
-        scrollEnabled={true}
+        scrollEnabled={false}
         style={{
           ...props.webViewStyle,
           height: props.height || 400,
